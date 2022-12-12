@@ -28,4 +28,17 @@ public class Main {
         }
 
     }
+
+    public static void printAllMedicinesOnQuantities(ArrayList<Pharmacy> pharmacies){
+        ArrayList<Pharmacy> newPharmacies = new ArrayList<>();
+        for(Pharmacy p : pharmacies){
+            if(p.quantity < 10){
+                newPharmacies.add(p);
+            }
+        }
+
+        for (Pharmacy p : newPharmacies) {
+            System.out.println(p.toString());
+        }
+    }
 }
